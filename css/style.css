@@ -1,0 +1,199 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: #000;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar h1 {
+  font-size: 1.8rem;
+}
+.navbar nav ul {
+  display: flex;
+  gap: 1rem;
+}
+.navbar nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+.navbar nav a:hover {
+  color: #facc15;
+}
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.whatsapp-btn:hover {
+  background: #1ebe57;
+}
+
+/* Menu mobile */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links.active {
+  display: block;
+  flex-direction: column;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('../img/estudio.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+
+/* Sobre */
+.sobre {
+  padding: 4rem 2rem;
+  background: #f3f3f3;
+  text-align: center;
+}
+.sobre h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/* Tatuadores */
+.tatuadores {
+  padding: 4rem 2rem;
+}
+.tatuadores h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.tatuador {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+.tatuador img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.tatuador img:hover {
+  transform: scale(1.05);
+}
+.info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.galeria {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.galeria img {
+  width: 100px;
+  border-radius: 5px;
+}
+
+/* Localização */
+.localizacao {
+  padding: 4rem 2rem;
+  background: #f3f3f3;
+  text-align: center;
+}
+.localizacao iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsividade */
+@media(min-width: 768px) {
+  .tatuador {
+    flex-direction: row;
+    align-items: center;
+  }
+  .tatuador img {
+    width: 300px;
+  }
+  .info {
+    margin-left: 2rem;
+  }
+}
+
+/* Menu mobile */
+@media(max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Animação */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
