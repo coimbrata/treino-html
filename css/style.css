@@ -41,14 +41,14 @@ body {
 .navbar nav a:hover {
   color: #facc15;
 }
-.whatsapp-btn {
+.botaowhatsapp {
   background: #25D366;
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
 }
-.whatsapp-btn:hover {
+.botaowhatsapp:hover {
   background: #1ebe57;
 }
 
